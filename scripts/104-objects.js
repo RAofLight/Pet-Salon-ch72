@@ -50,7 +50,6 @@ console.log(student3.isStudent);
 // New Concept: Interpolation
 console.log(`Hello my name is ${student1.name}, I am ${student1.age} years old `);
 
-function displayPets(){
+
     let p = document.getElementById("paragraph")
     p.innerHTML = `Hello my name is ${student1.name}, I am ${student1.age} years old `;
-}

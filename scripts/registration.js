@@ -46,11 +46,5 @@ function displayPets(){
     console.log(`${pet1.name}`);
 }
 
-let a = document.getElementById("petNames");
-a.innerHTML = `${pet1.name}`;
-
-let b = document.getElementById("petNames1");
-b.innerHTML = `${pet2.name}`;
-
-let c = document.getElementById("petNames2");
-c.innerHTML = `${pet3.name}`;
+    let li = document.getElementById("petNames");
+li.innerHTML = `<li>${pet1.name}</li><li>${pet2.name}</li><li>${pet3.name}</li>`;
