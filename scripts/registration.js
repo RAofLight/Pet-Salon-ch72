@@ -44,7 +44,9 @@ console.log(pet3.breed);
 
 function displayPets(){
     console.log(`${pet1.name}`);
+
+ let pN = document.getElementById("petNames");
+pN.innerHTML = `<li>${pet1.name}</li><li>${pet2.name}</li><li>${pet3.name}</li>`;
 }
 
-    let li = document.getElementById("petNames");
-li.innerHTML = `<li>${pet1.name}</li><li>${pet2.name}</li><li>${pet3.name}</li>`;
+displayPets();
