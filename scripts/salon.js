@@ -13,10 +13,10 @@ console.log(salon.phone);
 console.log(salon.address);
 
 function displaySalonInfo(){
-    console.log("Displaying Info...");
+    console.log(``);
 
     let p = document.getElementById("aboutUS");
-    p.innerHTML = `Namaste and welcome to ${salon.name}, your pets Oasis! We are loctated at 
+    aboutUs.innerHTML = `Namaste and welcome to ${salon.name}, your pets Oasis! We are loctated at 
     ${salon.address}.  Our hours of operation are from ${salon.hours}.  Reserve your pets treatment today, call and book now at ${salon.phone}.`;
 };
 

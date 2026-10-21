@@ -27,6 +27,7 @@ function add(){
     list.innerHTML += `
         <li>${text}</li>
     `;
-
+    
+    // Clear the fields
     document.getElementById("text").value = "";
 }

@@ -18,18 +18,18 @@
            
            <div class="mb-3">
             <label class="form-label">Name</label>
-            <input class="form-control" type="text" id="" placeholder="Pineapple">
+            <input class="form-control" type="text" id="productName" placeholder="Pineapple">
            </div>
 
            <div class="mb-3">
             <label class="form-label">Price</label>
-            <input class="form-control"  type="number" id="" placeholder="11">
+            <input class="form-control"  type="number" id="productPrice" placeholder="11">
            </div>
 
            <div class="mb-3">
              <label class="form-label">Category</label>
 
-             <select class="form-select" id="">
+             <select class="form-select" id="productCategory">
                 <option value="">Select a catagory</option>
                 <option value="fruits">Fruits</option>
                 <option value="electronics">Electronics</option>
@@ -39,7 +39,7 @@
 
            <div class="d-flex justify-content-end gap-3">
 
-               <button class="btn btn-primary" type="submit">Register</button>
+               <button onclick="registerProduct(event)" class="btn btn-primary" type="submit">Register</button>
 
                <button class="btn btn-secondary" type="reset">Reset</button>
 
@@ -48,5 +48,32 @@
         </form>
 
     </section>
+
+    <section class="m-4">
+        <h2>Registered Products</h2>
+
+        <!-- Table -->
+         <table class="table mt-4">
+            <!-- Header -->
+             <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Delete</th>
+             </tr>
+
+            <!-- Body-->
+             <tbody id="body">
+                 <tr>
+                   <td>Pineapple</td>
+                   <td>11</td>
+                   <td>fruits</td>
+                 </tr>
+            </tbody>
+         </table>
+
+    </section>
+
+    <script src="./scripts/104-forms.js"></script>
 </body>
 </html>

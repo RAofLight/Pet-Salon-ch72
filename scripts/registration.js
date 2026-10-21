@@ -51,7 +51,9 @@ pN.innerHTML = `<li>${pet1.name}</li><li>${pet2.name}</li><li>${pet3.name}</li>`
 
 displayPets();
 
-function Pet4(name, age, breed, gender, service){
+// Object Constructor
+
+function Pet(name, age, breed, gender, service){
     this.name = name;
     this.age = age;
     this.breed = breed;
@@ -59,25 +61,9 @@ function Pet4(name, age, breed, gender, service){
     this.service = service;
 }
 
-let pet4 = new Pet4("Daphne", 2, "Yorkie", "female", "Style Package");
+let pet4 = new Pet("Daphne", 2, "Yorkie", "female", "Style Package");
 
-function Pet5(name, age, breed, gender, service){
-    this.name = name;
-    this.age = age;
-    this.breed = breed;
-    this.gender = gender;
-    this.service = service;
-}
+let pet5 = new Pet("Isis", 5, "Sphinx Cat", "female", "Shine Package");
 
-let pet5 = new Pet6("Isis", 5, "Sphinx Cat", "female", "Shine Package");
-
-function Pet6(name, age, breed, gender, service){
-    this.name = name;
-    this.age = age;
-    this.breed = breed;
-    this.gender = gender;
-    this.service = service;
-}
-
-let pet6 = new Pet6("Dynamite", 4, "Golden Doodle", "male", "Fluff Package");
+let pet6 = new Pet("Dynamite", 4, "Golden Doodle", "male", "Fluff Package");
 
