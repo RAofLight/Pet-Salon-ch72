@@ -45,8 +45,6 @@ console.log(pet3.breed);
 function displayPets(){
     console.log(`${pet1.name}`);
 
- let pN = document.getElementById("petNames");
-pN.innerHTML = `<li>${pet1.name}</li><li>${pet2.name}</li><li>${pet3.name}</li>`;
 }
 
 displayPets();
@@ -67,3 +65,51 @@ let pet5 = new Pet("Isis", 5, "Sphinx Cat", "female", "Shine Package");
 
 let pet6 = new Pet("Dynamite", 4, "Golden Doodle", "male", "Fluff Package");
 
+
+// Table
+
+function registerPet(event){
+    event.preventDefault();
+
+
+let petName = document.getElementById("petName").value;
+let petAge = document.getElementById("petAge").value;
+let petBreed = document.getElementById("petBreed").value;
+let petGender = document.getElementById("petGender").value;
+let petService = document.getElementById("petService").value;
+
+let pet = new Pet(petName, petAge, petBreed, petGender, petService);
+
+ let row = document.createElement("tr");
+    row.innerHTML =`
+        <td>${pet.name}</td>
+        <td>${pet.age}</td> 
+        <td>${pet.breed}</td>
+        <td>${pet.gender}</td>
+        <td>${pet.service}</td>
+        <td><button class="btn btn-danger delete-btn">Delete</button></td>
+    `;
+
+    let body = document.getElementById("body");
+    body.appendChild(row);
+
+    // Delete functionality
+    row.querySelector(".delete-btn").addEventListener("click", function(){
+
+        let confirmation = confirm("Are you sure you want to delete this row?");
+
+        if(confirmation){
+        row.remove();
+        }
+
+        
+    });
+
+    // Clear the fields
+    document.getElementById("petName").value = "";
+    document.getElementById("petAge").value = "";
+    document.getElementById("petBreed").value = "";
+    document.getElementById("petGender").value = "";
+    document.getElementById("petService").value = "";
+
+}
