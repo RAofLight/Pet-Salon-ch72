@@ -1,0 +1,39 @@
+/* Color variables -> Default Mood: Light */
+:root{
+    --background-color: #f4f4fb;
+    --surface-color: #fbfbff;
+    --text-color: #1a2744;
+    --accent-color: #008fff;
+}
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: var(--accent-color);
+}
+
+.image-container{
+    width: 20%;
+}
+
+.image-container img{
+    width: 100%;
+    border-radius: 100%;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+section{
+    height: 100vh;
+    justify-content: space-evenly;
+}
