@@ -1,6 +1,8 @@
 $("#registerService").click(function(event){
 
     event.preventDefault();
+
+
     // 1. Get the values -> .val();
     // Get the input fields values using jQuerry -> $("") -> val
 
@@ -18,6 +20,11 @@ $("#registerService").click(function(event){
     }else if(servicePrice == ""){
         $("#servicePrice").css("border", "3px solid red");
     }else{
+    // Save to local storage -> 
+    localStorage.setItem("serviceNameKey", serviceName);
+    localStorage.setItem("serviceDesriptionKey", serviceDescription);
+    localStorage.setItem("servicePriceKey", servicePrice);
+
     // Remove the red border
     $("#serviceName").css("border", "");
     $("#serviceDescription").css("border", "");
